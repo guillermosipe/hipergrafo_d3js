@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <!-- barras -->
+    <script src="js/d3.min.js"></script>
+    <script src="js/hipergrafo.js"></script>
+    <script src="js/randomColor.js"></script>
+    </head>
+
+  <body>
+    <div id='hipergrafo' style="max-width:750px;"></div>
+  </body>
+
+  <script type="text/javascript">
+
+  d3.json("data/hipergrafo_sin_centro.json", function(error, data) {
+      draw_graph(data,"#hipergrafo");
+    });
+
+  </script>
+</html>
