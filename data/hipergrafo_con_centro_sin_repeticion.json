@@ -1,0 +1,81 @@
+{
+  "hyperedges":["E1","E2","E3","E4"],
+	"links":[
+    {"parent": "center", "child": "E1"},
+    {"parent": "center", "child": "E2"},
+    {"parent": "center", "child": "E3"},
+    {"parent": "center", "child": "E4"},
+    {"parent": "center", "child": "v4_1"},
+		{"parent": "E1", "child": "v1_1"},
+		{"parent": "E1", "child": "v2_1"},
+		{"parent": "E1", "child": "v3_1"},
+    {"parent": "E2", "child": "v2_2"},
+    {"parent": "E2", "child": "v3_2"},
+    {"parent": "E3", "child": "v3_3"},
+    {"parent": "E3", "child": "v5_1"},
+    {"parent": "E3", "child": "v6_1"},
+    {"parent": "E4", "child": "v7_1"}
+	],
+  "nodes": {
+		"center": {
+			"level": 1,
+			"word": ""
+		},
+		"E1": {
+			"level": 2,
+			"word": "E1"
+		},
+		"E2": {
+			"level": 2,
+			"word": "E2"
+		},
+		"E3": {
+			"level": 2,
+			"word": "E3"
+		},
+		"E4": {
+			"level": 2,
+			"word": "E4"
+		},
+		"v1_1": {
+			"level": 3,
+			"word": "v1"
+		},
+		"v2_1": {
+			"level": 3,
+			"word": "v2"
+		},
+		"v2_2": {
+			"level": 3,
+			"word": "v2"
+		},
+		"v3_1": {
+			"level": 3,
+			"word": "v3"
+		},
+		"v3_2": {
+			"level": 3,
+			"word": "v3"
+		},
+		"v3_3": {
+			"level": 3,
+			"word": "v3"
+		},
+		"v4_1": {
+			"level": 3,
+			"word": "v4"
+		},
+		"v5_1": {
+			"level": 3,
+			"word": "v5"
+		},
+		"v6_1": {
+			"level": 3,
+			"word": "v6"
+		},
+		"v7_1": {
+			"level": 3,
+			"word": "v7"
+		}
+	}
+}
