@@ -1,6 +1,6 @@
 # D3JS: Hipergrafo
 
-Representación de un hipergrafo a una de grafo simple.
+Representación de un hipergrafo en un grafo simple.
 
 Aplicaciones de terceros usadas:
 * [D3.js](https://d3js.org/)
