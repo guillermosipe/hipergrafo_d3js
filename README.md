@@ -82,3 +82,26 @@ d3.json("Nombre_Archivo.json", function(error, data) {
 
 </script>
 ```
+
+## Conversor de matriz de incidencia a estructura para la libreria.
+En la carpeta Convert_matrix_to_json se encuentra un programa en python que facilita la conversión de una matriz de incidencia a la estructura necesaria de la libreria.
+
+Para ello es necesario un archivo en formato JSON con la siguiente estructura:
+
+```json
+{
+  "matriz":[[1,1,0,0,0,0],
+            [0,0,1,0,1,1],
+            [0,1,0,1,1,1]]
+}
+```
+
+Para la ejecución del programa:
+```shell
+python3 main.py --matriz matriz.json --centro --repeticion
+```
+
+En donde sus argumentos son los siguientes:
+ * --matriz: Es el archivo con la matriz binaria.
+ * --centro: Es si quieremos que se dibuje el centro.
+ * --repeticion: Es si queremos que existe repeticion en los nodos.
