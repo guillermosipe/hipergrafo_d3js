@@ -64,9 +64,9 @@ En donde:
   * hyperedges: Es un listado de todas las hiperaristas.
   * links: Son las aristas o relaciones entre los nodos.
   * nodes: Son los nodos, se debe de declarar cada uno de ellos, existen 3 niveles:
-  ⋅⋅* 1: para el nodo central que une todas las hiperaristas.
-  ⋅⋅* 2: para las hiperaristas.
-  ⋅⋅* 3: para los nodos.
+  	* 1: para el nodo central que une todas las hiperaristas.
+  	* 2: para las hiperaristas.
+  	* 3: para los nodos.
   
 Para hacer uso de la libreria es necesario declarar lo siguiente:
 ```
