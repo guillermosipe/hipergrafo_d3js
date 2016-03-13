@@ -80,7 +80,7 @@ function draw_graph(data,id_graph) {
         .data(force.links())
         .enter().append("path")
         .attr("fill","none")
-        .style("stroke", function(d) {debugger; if(d.source.level==2 && d.target.level==3){return d.source.color;}else if(d.source.level==1 && d.target.level==3) {return color_negro;} return d.target.color;})
+        .style("stroke", function(d) { if(d.source.level==2 && d.target.level==3){return d.source.color;}else if(d.source.level==1 && d.target.level==3) {return color_negro;} return d.target.color;})
         .style("stroke-width","2.5px");
 
     //se define el nodo
@@ -195,7 +195,7 @@ function draw_graph(data,id_graph) {
       node.nodosIncidentes
           .transition()
           .duration(tiempo_animacion)
-          .style("stroke", function(d) {debugger; if(d.source.level==2 && d.target.level==3){return d.source.color;}else if(d.source.level==1 && d.target.level==3) {return color_negro;} return d.target.color;})
+          .style("stroke", function(d) { if(d.source.level==2 && d.target.level==3){return d.source.color;}else if(d.source.level==1 && d.target.level==3) {return color_negro;} return d.target.color;})
 
     }
 
@@ -222,7 +222,7 @@ function draw_graph(data,id_graph) {
 
       path.transition()
           .duration(tiempo_animacion)
-          .style("stroke", function(d) {debugger; if(d.source.level==2 && d.target.level==3){return d.source.color;}else if(d.source.level==1 && d.target.level==3) {return color_negro;} return d.target.color;})
+          .style("stroke", function(d) { if(d.source.level==2 && d.target.level==3){return d.source.color;}else if(d.source.level==1 && d.target.level==3) {return color_negro;} return d.target.color;})
 
     }
 
