@@ -199,38 +199,38 @@ function draw_graph(data,id_graph) {
 
     }
 
-    function mouseout() {
-
-      d3.select(this).select("text").transition()
-          .duration(tiempo_animacion)
-          .style("font", "14px sans-serif")
-          .text(function(d) { return d.word; });
-
-      graph_nodes.selectAll('circle')
-                .transition()
-                .duration(tiempo_animacion)
-                .style("fill", function(d){if(d.level == 1){return color_blanco;} else if(d.level == 2){return color_gris;} return color_negro;})
-                .style("stroke",color_negro)
-                .style("stroke-width", function(d){if(d.level == 1){return 4;} return 1.5;});
-
-      graph_nodes.selectAll('text')
-                .transition()
-                .duration(tiempo_animacion)
-                .style("fill", "black")
-                .style("font", "14px sans-serif")
-                .text(function(d) { return d.word; });
-
-      path.transition()
-          .duration(tiempo_animacion)
-          .style("stroke", function(d) { if(d.source.level==2 && d.target.level==3){return d.source.color;}else if(d.source.level==1 && d.target.level==3) {return color_negro;} return d.target.color;})
-
-    }
-
     //acomodo del grafo
     force.on("tick", tick);
     force.start();
 
 };
+
+function mouseout() {
+
+  /*d3.select(this).select("text").transition()
+      .duration(tiempo_animacion)
+      .style("font", "14px sans-serif")
+      .text(function(d) { return d.word; });*/
+
+  graph_nodes.selectAll('circle')
+            .transition()
+            .duration(tiempo_animacion)
+            .style("fill", function(d){if(d.level == 1){return color_blanco;} else if(d.level == 2){return color_gris;} return color_negro;})
+            .style("stroke",color_negro)
+            .style("stroke-width", function(d){if(d.level == 1){return 4;} return 1.5;});
+
+  graph_nodes.selectAll('text')
+            .transition()
+            .duration(tiempo_animacion)
+            .style("fill", "black")
+            .style("font", "14px sans-serif")
+            .text(function(d) { return d.word; });
+
+  path.transition()
+      .duration(tiempo_animacion)
+      .style("stroke", function(d) { if(d.source.level==2 && d.target.level==3){return d.source.color;}else if(d.source.level==1 && d.target.level==3) {return color_negro;} return d.target.color;})
+
+}
 
 function colorear_listado(listado) {
   listado =  listado.replace(/(\[|\]| )/mg,"");
