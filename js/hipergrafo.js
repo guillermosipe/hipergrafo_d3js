@@ -231,3 +231,26 @@ function draw_graph(data,id_graph) {
     force.start();
 
 };
+
+function colorear_listado(listado) {
+  listado =  listado.replace(/(\[|\]| )/mg,"");
+  listado =  listado.replace(/\d+/g, 'v\$&');
+  nodos = listado.split(',');
+
+  graph_nodes.selectAll('circle')
+            .transition()
+            .duration(tiempo_animacion)
+            .style("fill", function(d){if(nodos.indexOf(d.word)>-1 || d.level==2){if(d.level == 1){return color_blanco;} else if(d.level == 2){return color_gris;} return color_negro;}else{return color_gris;}})
+            .style("stroke",function(d){if(nodos.indexOf(d.word)>-1|| d.level==2){return color_negro;}else{return color_gris;}})
+            .style("stroke-width", function(d){if(d.level == 1){return 4;} return 1.5;});
+
+  graph_nodes.selectAll('text')
+            .transition()
+            .duration(tiempo_animacion)
+            .style("fill",function(d){if(nodos.indexOf(d.word)>-1|| d.level==2){return color_negro;}else{return color_gris;}})
+
+  path.transition()
+      .duration(tiempo_animacion)
+      .style("stroke",function(d){if(nodos.indexOf(d.child.split("E")[0])>-1){if (d.target.color === undefined) {return d.source.color;} return d.target.color;}return color_gris;});
+
+}
