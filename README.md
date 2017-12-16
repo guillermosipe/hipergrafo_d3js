@@ -105,3 +105,9 @@ En donde sus argumentos son los siguientes:
  * --matriz: Es el archivo con la matriz binaria.
  * --centro: Es si quieremos que se dibuje el centro.
  * --repeticion: Es si queremos que existe repeticion en los nodos.
+
+## Método para resaltar hiperaristas de un conjunto de nodos
+Para resaltar las hiperaristas pertenecientes a un conjunto de nodos es necesario hacer uso de la función: colorear_listado, para ello podemos llamar el método por medio de una etiqueta y utilizando la funcion onmouseover, es importante enviar el listado con la siguiente nomenclatura: [1,2,...,N]
+```javascript
+<a href="#" onmouseover="colorear_listado('[2, 8, 9]');return false;" onmouseout="mouseout();return false;">[2, 8, 9]</a>
+```
